@@ -1,0 +1,913 @@
+# Group Project discussion
+
+
+## Project discussion List [/projects/{project_id}/discussion-boards/{?per_page,page,project_id}]
+
+### List All Project discussion [GET]
+
+Fetches all available Project discussion with pagination
++ Parameters
+    + per_page: 15 (number, optional) - The number of results per page.
+        + Default: `15`
+    + page: 1 (number, optional) - The current page number of results.
+        + Default: `1`
+    + project_id (number, required) - Id of Project
+
++ Response 200 (application/json)
+    + Body
+    
+            {
+                "data": [
+                    {
+                        "id": 151,
+                        "title": "co discussion",
+                        "description": "",
+                        "order": "0",
+                        "created_at": {
+                            "date": "2019-06-21",
+                            "time": "09:13:54",
+                            "datetime": "2019-06-21 09:13:54",
+                            "timezone": "Etc\/UTC",
+                            "timestamp": "2019-06-21T09:13:54+00:00"
+                        },
+                        "meta": {
+                            "privacy": "1",
+                            "total_comments": 0,
+                            "total_users": 0,
+                            "total_files": 0
+                        },
+                        "creator": {
+                            "data": {
+                                "id": 3,
+                                "username": "user_login2",
+                                "nicename": "user_login2",
+                                "email": "example2@example.com",
+                                "profile_url": "",
+                                "display_name": "user_login2",
+                                "manage_capability": 0,
+                                "create_capability": 0,
+                                "avatar_url": "http:\/\/2.gravatar.com\/avatar\/b75a7dd26f16ae13b440190aef177ac1?s=96&d=mm&r=g",
+                                "github": "mishu123",
+                                "bitbucket": "mishu24",
+                                "roles": {
+                                    "data": [
+                                        {
+                                            "id": 1,
+                                            "title": "Manager",
+                                            "description": "Manager is a person who manages the project.",
+                                            "created_at": {
+                                                "date": "2019-05-21",
+                                                "time": "05:36:21",
+                                                "datetime": "2019-05-21 05:36:21",
+                                                "timezone": "Etc\/UTC",
+                                                "timestamp": "2019-05-21T05:36:21+00:00"
+                                            },
+                                            "slug": "manager"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "updater": {
+                            "data": {
+                                "id": 3,
+                                "username": "user_login2",
+                                "nicename": "user_login2",
+                                "email": "example2@example.com",
+                                "profile_url": "",
+                                "display_name": "user_login2",
+                                "manage_capability": 0,
+                                "create_capability": 0,
+                                "avatar_url": "http:\/\/2.gravatar.com\/avatar\/b75a7dd26f16ae13b440190aef177ac1?s=96&d=mm&r=g",
+                                "github": "mishu123",
+                                "bitbucket": "mishu24",
+                                "roles": {
+                                    "data": [
+                                        {
+                                            "id": 1,
+                                            "title": "Manager",
+                                            "description": "Manager is a person who manages the project.",
+                                            "created_at": {
+                                                "date": "2019-05-21",
+                                                "time": "05:36:21",
+                                                "datetime": "2019-05-21 05:36:21",
+                                                "timezone": "Etc\/UTC",
+                                                "timestamp": "2019-05-21T05:36:21+00:00"
+                                            },
+                                            "slug": "manager"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "users": {
+                            "data": []
+                        },
+                        "milestone": {
+                            "data": {
+                                "id": 150,
+                                "title": "User_login2 milestone",
+                                "description": null,
+                                "order": 0,
+                                "achieve_date": {
+                                    "date": "2019-06-21",
+                                    "time": "00:00:00",
+                                    "datetime": "2019-06-21 00:00:00",
+                                    "timezone": "Etc\/UTC",
+                                    "timestamp": "2019-06-21T00:00:00+00:00"
+                                },
+                                "achieved_at": {
+                                    "date": "2019-06-21",
+                                    "time": "09:11:43",
+                                    "datetime": "2019-06-21 09:11:43",
+                                    "timezone": "Etc\/UTC",
+                                    "timestamp": "2019-06-21T09:11:43+00:00"
+                                },
+                                "status": "incomplete",
+                                "created_at": {
+                                    "date": "2019-06-21",
+                                    "time": "09:11:43",
+                                    "datetime": "2019-06-21 09:11:43",
+                                    "timezone": "Etc\/UTC",
+                                    "timestamp": "2019-06-21T09:11:43+00:00"
+                                },
+                                "meta": {
+                                    "achieve_date": "2019-06-21 00:00:00",
+                                    "privacy": "1",
+                                    "total_task_list": 0,
+                                    "total_discussion_board": 1
+                                },
+                                "creator": {
+                                    "data": {
+                                        "id": 3,
+                                        "username": "user_login2",
+                                        "nicename": "user_login2",
+                                        "email": "example2@example.com",
+                                        "profile_url": "",
+                                        "display_name": "user_login2",
+                                        "manage_capability": 0,
+                                        "create_capability": 0,
+                                        "avatar_url": "http:\/\/2.gravatar.com\/avatar\/b75a7dd26f16ae13b440190aef177ac1?s=96&d=mm&r=g",
+                                        "github": "mishu123",
+                                        "bitbucket": "mishu24",
+                                        "roles": {
+                                            "data": [
+                                                {
+                                                    "id": 1,
+                                                    "title": "Manager",
+                                                    "description": "Manager is a person who manages the project.",
+                                                    "created_at": {
+                                                        "date": "2019-05-21",
+                                                        "time": "05:36:21",
+                                                        "datetime": "2019-05-21 05:36:21",
+                                                        "timezone": "Etc\/UTC",
+                                                        "timestamp": "2019-05-21T05:36:21+00:00"
+                                                    },
+                                                    "slug": "manager"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                "updater": {
+                                    "data": {
+                                        "id": 3,
+                                        "username": "user_login2",
+                                        "nicename": "user_login2",
+                                        "email": "example2@example.com",
+                                        "profile_url": "",
+                                        "display_name": "user_login2",
+                                        "manage_capability": 0,
+                                        "create_capability": 0,
+                                        "avatar_url": "http:\/\/2.gravatar.com\/avatar\/b75a7dd26f16ae13b440190aef177ac1?s=96&d=mm&r=g",
+                                        "github": "mishu123",
+                                        "bitbucket": "mishu24",
+                                        "roles": {
+                                            "data": [
+                                                {
+                                                    "id": 1,
+                                                    "title": "Manager",
+                                                    "description": "Manager is a person who manages the project.",
+                                                    "created_at": {
+                                                        "date": "2019-05-21",
+                                                        "time": "05:36:21",
+                                                        "datetime": "2019-05-21 05:36:21",
+                                                        "timezone": "Etc\/UTC",
+                                                        "timestamp": "2019-05-21T05:36:21+00:00"
+                                                    },
+                                                    "slug": "manager"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "files": {
+                            "data": []
+                        }
+                    },
+                    {
+                        "id": 145,
+                        "title": "Co-worker PRIVATE",
+                        "description": "",
+                        "order": "0",
+                        "created_at": {
+                            "date": "2019-06-21",
+                            "time": "04:49:03",
+                            "datetime": "2019-06-21 04:49:03",
+                            "timezone": "Etc\/UTC",
+                            "timestamp": "2019-06-21T04:49:03+00:00"
+                        },
+                        "meta": {
+                            "privacy": "1",
+                            "total_comments": 0,
+                            "total_users": 0,
+                            "total_files": 0
+                        },
+                        "creator": {
+                            "data": {
+                                "id": 29,
+                                "username": "user_login241",
+                                "nicename": "user_login241",
+                                "email": "jayontasarkar025@gmail.com",
+                                "profile_url": "",
+                                "display_name": "user_login241",
+                                "manage_capability": 0,
+                                "create_capability": 0,
+                                "avatar_url": "http:\/\/0.gravatar.com\/avatar\/f0fb0fb06be2111cf54d85e5f61fdf13?s=96&d=mm&r=g",
+                                "github": "joyontodfswerfsdafssafsdfsdafsd",
+                                "bitbucket": "joyontofsdawe",
+                                "roles": {
+                                    "data": [
+                                        {
+                                            "id": 2,
+                                            "title": "Co-Worker",
+                                            "description": "Co-worker is person who works under a project.",
+                                            "created_at": {
+                                                "date": "2019-05-21",
+                                                "time": "05:36:21",
+                                                "datetime": "2019-05-21 05:36:21",
+                                                "timezone": "Etc\/UTC",
+                                                "timestamp": "2019-05-21T05:36:21+00:00"
+                                            },
+                                            "slug": "co_worker"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "updater": {
+                            "data": {
+                                "id": 29,
+                                "username": "user_login241",
+                                "nicename": "user_login241",
+                                "email": "jayontasarkar025@gmail.com",
+                                "profile_url": "",
+                                "display_name": "user_login241",
+                                "manage_capability": 0,
+                                "create_capability": 0,
+                                "avatar_url": "http:\/\/0.gravatar.com\/avatar\/f0fb0fb06be2111cf54d85e5f61fdf13?s=96&d=mm&r=g",
+                                "github": "joyontodfswerfsdafssafsdfsdafsd",
+                                "bitbucket": "joyontofsdawe",
+                                "roles": {
+                                    "data": [
+                                        {
+                                            "id": 2,
+                                            "title": "Co-Worker",
+                                            "description": "Co-worker is person who works under a project.",
+                                            "created_at": {
+                                                "date": "2019-05-21",
+                                                "time": "05:36:21",
+                                                "datetime": "2019-05-21 05:36:21",
+                                                "timezone": "Etc\/UTC",
+                                                "timestamp": "2019-05-21T05:36:21+00:00"
+                                            },
+                                            "slug": "co_worker"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "users": {
+                            "data": []
+                        },
+                        "files": {
+                            "data": []
+                        }
+                    }
+                ],
+                "meta": {
+                    "pagination": {
+                        "total": 2,
+                        "count": 2,
+                        "per_page": 15,
+                        "current_page": 1,
+                        "total_pages": 1,
+                        "links": []
+                    }
+                }
+            }
+
+## Project discussion List [/projects/{project_id}/discussion-boards]
+
+### Create A Project discussion [POST]
++ title: (string, required) - title of project discussion
++ description: (array, optional) - description of disscussion
++ milestone: (string,optional) 
++ notify_users: (boolean,optional)
++ order: (number,optional) 
+
++ Parameters
+    + project_id (number, required) - Id of Project
+
++ Request (application/json)
+    + Body
+
+            {
+                "title": "test disscussion",
+                "description": "test",
+                "notify_users": "",
+                "order": 0
+            }
+
++ Response 201 (application/json)
+    + Body
+
+            {
+                "message": "A new discussion has been created successfully.",
+                "data": {
+                    "id": 184,
+                    "title": "test disscussion",
+                    "description": "<p>test<\/p>\n",
+                    "order": 0,
+                    "created_at": {
+                        "date": "2019-07-30",
+                        "time": "06:58:47",
+                        "datetime": "2019-07-30 06:58:47",
+                        "timezone": "Etc\/UTC",
+                        "timestamp": "2019-07-30T06:58:47+00:00"
+                    },
+                    "meta": {
+                        "total_comments": 0,
+                        "total_users": 0,
+                        "total_files": 0
+                    },
+                    "creator": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": []
+                            }
+                        }
+                    },
+                    "updater": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": []
+                            }
+                        }
+                    },
+                    "users": {
+                        "data": []
+                    },
+                    "files": {
+                        "data": []
+                    }
+                }
+            }
+
+
+## Manage Single Project discussion [/projects/{project_id}/discussion-boards/{discussion_board_id}]
+
++ Parameters
+    + project_id (number, required) - Id of Project
+    + discussion_board_id (number,required) - id of the Project discussion in the form of an string
+
+### Retrieve An Project discussion [GET]
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "data": {
+                    "id": 184,
+                    "title": "test disscussion",
+                    "description": "<p>test<\/p>\n",
+                    "order": "0",
+                    "created_at": {
+                        "date": "2019-07-30",
+                        "time": "06:58:47",
+                        "datetime": "2019-07-30 06:58:47",
+                        "timezone": "Etc\/UTC",
+                        "timestamp": "2019-07-30T06:58:47+00:00"
+                    },
+                    "meta": {
+                        "total_comments": 0,
+                        "total_users": 0,
+                        "total_files": 0
+                    },
+                    "creator": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": []
+                            }
+                        }
+                    },
+                    "updater": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": []
+                            }
+                        }
+                    },
+                    "users": {
+                        "data": []
+                    },
+                    "files": {
+                        "data": []
+                    }
+                }
+            }
+
+### Update An Project discussion [PUT]
++ title: (string, required) - title of project discussion
++ description: (array, optional) - description of disscussion
++ milestone: (string,optional) - 
++ notify_users: (boolean,optional)
++ order: (number,optional) - 
+
++ Parameters
+    + project_id (number, required) - Id of Project
+    + discussion_board_id (number,required) - id of the Project discussion 
+
++ Request (application/json)
+    + Body
+
+            {
+                "title": "test disscussion",
+                "description": "test",
+                "notify_users": "",
+                "order": 0
+            }
+
++ Response 201 (application/json)
+    + Body
+            
+            {
+                "message": "A discussion has been updated successfully.",
+                "data": {
+                    "id": 182,
+                    "title": "reports is not working why",
+                    "description": "<p>test<\/p>\n",
+                    "order": "0",
+                    "created_at": {
+                        "date": "2019-07-30",
+                        "time": "06:55:20",
+                        "datetime": "2019-07-30 06:55:20",
+                        "timezone": "Etc\/UTC",
+                        "timestamp": "2019-07-30T06:55:20+00:00"
+                    },
+                    "meta": {
+                        "total_comments": 0,
+                        "total_users": 0,
+                        "total_files": 0
+                    },
+                    "creator": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": [
+                                    {
+                                        "id": 1,
+                                        "title": "Manager",
+                                        "description": "Manager is a person who manages the project.",
+                                        "created_at": {
+                                            "date": "2019-05-21",
+                                            "time": "05:36:21",
+                                            "datetime": "2019-05-21 05:36:21",
+                                            "timezone": "Etc\/UTC",
+                                            "timestamp": "2019-05-21T05:36:21+00:00"
+                                        },
+                                        "slug": "manager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "updater": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": [
+                                    {
+                                        "id": 1,
+                                        "title": "Manager",
+                                        "description": "Manager is a person who manages the project.",
+                                        "created_at": {
+                                            "date": "2019-05-21",
+                                            "time": "05:36:21",
+                                            "datetime": "2019-05-21 05:36:21",
+                                            "timezone": "Etc\/UTC",
+                                            "timestamp": "2019-05-21T05:36:21+00:00"
+                                        },
+                                        "slug": "manager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "users": {
+                        "data": []
+                    },
+                    "files": {
+                        "data": []
+                    }
+                }
+            }
+
+### Delete An Project discussion [DELETE]
+
++ Request (application/json)
++ Response 200 (application/json)
+    + Body    
+
+            {
+                "message": "A discussion has been deleted successfully."
+            }
+
+## Project discussion [/projects/{project_id}/discussion-boards/privacy/{discussion_board_id}]
+
+### Project discussion privacy [POST]
+
++ Parameters
+    + discussion_board_id (number,required)
+    + project_id (number,required)
+
++ Response 200 (application/json)
+    + Body 
+
+            {
+                
+            }
+
+## Project discussion Attach User [/projects/{project_id}/discussion-boards/{discussion_board_id}/attach-users]
+
+### Project disscussion Attach User [POST]
+
++ Parameters
+    + discussion_board_id (number,required) - Project discussion id
+    + project_id (number,required) - Project id
+
++ Request
+    + Body
+            
+            {
+                "users" [ 1,2]
+            }
+
++ Response 200 (application/json)
+    + Body 
+    
+            {
+                "data": {
+                    "id": 192,
+                    "title": "test disscussion",
+                    "description": "<p>test<\/p>\n",
+                    "order": "0",
+                    "created_at": {
+                        "date": "2019-08-02",
+                        "time": "05:57:59",
+                        "datetime": "2019-08-02 05:57:59",
+                        "timezone": "Etc\/UTC",
+                        "timestamp": "2019-08-02T05:57:59+00:00"
+                    },
+                    "meta": {
+                        "privacy": null,
+                        "total_comments": 0,
+                        "total_users": 2,
+                        "total_files": 0
+                    },
+                    "creator": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": [
+                                    {
+                                        "id": 1,
+                                        "title": "Manager",
+                                        "description": "Manager is a person who manages the project.",
+                                        "created_at": {
+                                            "date": "2019-05-21",
+                                            "time": "05:36:21",
+                                            "datetime": "2019-05-21 05:36:21",
+                                            "timezone": "Etc\/UTC",
+                                            "timestamp": "2019-05-21T05:36:21+00:00"
+                                        },
+                                        "slug": "manager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "updater": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": [
+                                    {
+                                        "id": 1,
+                                        "title": "Manager",
+                                        "description": "Manager is a person who manages the project.",
+                                        "created_at": {
+                                            "date": "2019-05-21",
+                                            "time": "05:36:21",
+                                            "datetime": "2019-05-21 05:36:21",
+                                            "timezone": "Etc\/UTC",
+                                            "timestamp": "2019-05-21T05:36:21+00:00"
+                                        },
+                                        "slug": "manager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "users": {
+                        "data": [
+                            {
+                                "id": 1,
+                                "username": "admin",
+                                "nicename": "admin",
+                                "email": "rrcucse.11@gmail.com",
+                                "profile_url": "",
+                                "display_name": "admin",
+                                "manage_capability": 1,
+                                "create_capability": 1,
+                                "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                                "github": "rokibulfsdsdafrokib",
+                                "bitbucket": "rokibulisalmfsd",
+                                "roles": {
+                                    "data": [
+                                        {
+                                            "id": 1,
+                                            "title": "Manager",
+                                            "description": "Manager is a person who manages the project.",
+                                            "created_at": {
+                                                "date": "2019-05-21",
+                                                "time": "05:36:21",
+                                                "datetime": "2019-05-21 05:36:21",
+                                                "timezone": "Etc\/UTC",
+                                                "timestamp": "2019-05-21T05:36:21+00:00"
+                                            },
+                                            "slug": "manager"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": 2,
+                                "username": "user_login",
+                                "nicename": "user_login",
+                                "email": "example@example.com",
+                                "profile_url": "",
+                                "display_name": "user_login",
+                                "manage_capability": 0,
+                                "create_capability": 0,
+                                "avatar_url": "http:\/\/2.gravatar.com\/avatar\/23463b99b62a72f26ed677cc556c44e8?s=96&d=mm&r=g",
+                                "github": "",
+                                "bitbucket": "",
+                                "roles": {
+                                    "data": []
+                                }
+                            }
+                        ]
+                    },
+                    "files": {
+                        "data": []
+                    }
+                }
+            }
+
+## Project discussion DeAttach User [/projects/{project_id}/discussion-boards/{discussion_board_id}/detach-users]
+
+### Project disscussion DeAttach User [POST]
+
++ Parameters
+    + discussion_board_id (number,required) - Project discussion Id
+    + project_id (number,required) - Project id
+
++ Request
+    + Body
+
+            {
+                "users" [ 1,2]
+            }
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "data": {
+                    "id": 192,
+                    "title": "test disscussion",
+                    "description": "<p>test<\/p>\n",
+                    "order": "0",
+                    "created_at": {
+                        "date": "2019-08-02",
+                        "time": "05:57:59",
+                        "datetime": "2019-08-02 05:57:59",
+                        "timezone": "Etc\/UTC",
+                        "timestamp": "2019-08-02T05:57:59+00:00"
+                    },
+                    "meta": {
+                        "privacy": null,
+                        "total_comments": 0,
+                        "total_users": 1,
+                        "total_files": 0
+                    },
+                    "creator": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": [
+                                    {
+                                        "id": 1,
+                                        "title": "Manager",
+                                        "description": "Manager is a person who manages the project.",
+                                        "created_at": {
+                                            "date": "2019-05-21",
+                                            "time": "05:36:21",
+                                            "datetime": "2019-05-21 05:36:21",
+                                            "timezone": "Etc\/UTC",
+                                            "timestamp": "2019-05-21T05:36:21+00:00"
+                                        },
+                                        "slug": "manager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "updater": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": [
+                                    {
+                                        "id": 1,
+                                        "title": "Manager",
+                                        "description": "Manager is a person who manages the project.",
+                                        "created_at": {
+                                            "date": "2019-05-21",
+                                            "time": "05:36:21",
+                                            "datetime": "2019-05-21 05:36:21",
+                                            "timezone": "Etc\/UTC",
+                                            "timestamp": "2019-05-21T05:36:21+00:00"
+                                        },
+                                        "slug": "manager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "users": {
+                        "data": [
+                            {
+                                "id": 1,
+                                "username": "admin",
+                                "nicename": "admin",
+                                "email": "rrcucse.11@gmail.com",
+                                "profile_url": "",
+                                "display_name": "admin",
+                                "manage_capability": 1,
+                                "create_capability": 1,
+                                "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                                "github": "rokibulfsdsdafrokib",
+                                "bitbucket": "rokibulisalmfsd",
+                                "roles": {
+                                    "data": [
+                                        {
+                                            "id": 1,
+                                            "title": "Manager",
+                                            "description": "Manager is a person who manages the project.",
+                                            "created_at": {
+                                                "date": "2019-05-21",
+                                                "time": "05:36:21",
+                                                "datetime": "2019-05-21 05:36:21",
+                                                "timezone": "Etc\/UTC",
+                                                "timestamp": "2019-05-21T05:36:21+00:00"
+                                            },
+                                            "slug": "manager"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "files": {
+                        "data": []
+                    }
+                }
+            }

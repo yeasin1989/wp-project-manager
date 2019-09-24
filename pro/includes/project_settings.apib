@@ -1,0 +1,144 @@
+# Group Project Settings
+
+## Project Settings [/projects/{project_id}/settings]
+
+### Project Settings [GET]
+
++ Parameters
+    + project_id (number,required) - Id of Project
+
++ Response 200 (application/json)
+    + Body 
+    
+            {
+                "settings" : {
+                    {
+                        "key" : " "
+                        "value" : {
+
+                        }
+                    }
+                }
+            }
+
+### Project Integrations [POST]
+
++ Request (application/json)
+    + Body
+    
+            {
+                "settings": {
+                    "key": "git_bit",
+                    "value": {
+                        "project_id": 7,
+                        "status": "disable"
+                    }
+                }
+            }
+
++ Response 200 (application/json)
+    + Body 
+    
+            {  
+                "message":"Settings has been changed successfully.",
+                "data":[  
+                    {  
+                        "id":5,
+                        "key":"git_bit",
+                        "value":{  
+                            "project_id":"7",
+                            "status":"disable"
+                        },
+                        "created_at":{  
+                            "date":"2019-06-25",
+                            "time":"05:49:11",
+                            "datetime":"2019-06-25 05:49:11",
+                            "timezone":"Etc\/UTC",
+                            "timestamp":"2019-06-25T05:49:11+00:00"
+                        }
+                    }
+                ]
+            }
+
+## Project Settings labels [/projects/{project_id}/settings/labels]
+
+### Project Settings labels [POST]
+
++ title (string,required)
++ description (string,optional)
++ color (string,required)
+
++ Parameters
+    + project_id (number,required) - Id of Project
+
+
++ Request  (application/json)
+    + Body 
+    
+            {
+                "title": "alert",
+                "description": "alert description",
+                "color": "#F61313"
+            }
+
++ Response 200 (application/json)
+    + Body 
+    
+            {
+                "data":  {
+                    "id":4,
+                    "title":"alert",
+                    "description":"alert description",
+                    "color":"#F61313",
+                    "status":1,
+                    "project_id":"7"
+                }
+            }
+
+## Project Settings labels [/projects/{project_id}/settings/labels/{label_id}]
+
+### Project Settings labels Update [POST]
+
+
++ title (string,required)
++ description (string,optional)
++ color (string,required)
+
++ Parameters
+    + project_id (number,required) - Id of Project
+    + label_id (number,required) - Id of label
+
++ Request  (application/json)
+    + Body 
+    
+            {
+                "title": "alert",
+                "description": "alert description",
+                "color": "#F61313"
+            }
+            
++ Response 200 (application/json)
+    + Body 
+    
+            {
+                "data": {
+                    "id": 8,
+                    "title": "issue 2",
+                    "description": "des",
+                    "color": "#CF4223",
+                    "status": 1,
+                    "project_id": "7"
+                }
+            }
+
+## Project Settings labels [/projects/{project_id}/settings/labels/{label_id}/delete]
+
+### Project Settings labels Delete [POST]
+
+
++ Response 200 (application/json)
+    + Body 
+    
+            {
+                 "message": "successfully deleted label"
+            }

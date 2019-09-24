@@ -1,0 +1,85 @@
+# Group Project Role
+
+
+## Project Role [/roles/{?per_page,page}]
+
+### List All Project Role [GET]
+
+Fetches all available Project Role with pagination
++ Parameters
+    + per_page: 15 (number, optional) - The number of results per page.
+        + Default: `15`
+    + page: 1 (number, optional) - The current page number of results.
+        + Default: `1`
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "data": [
+                    {
+                        "id": 1,
+                        "title": "Manager",
+                        "description": "Manager is a person who manages the project.",
+                        "created_at": {
+                            "date": "2019-05-21",
+                            "time": "05:36:21",
+                            "datetime": "2019-05-21 05:36:21",
+                            "timezone": "Etc\/UTC",
+                            "timestamp": "2019-05-21T05:36:21+00:00"
+                        },
+                        "slug": "manager"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Co-Worker",
+                        "description": "Co-worker is person who works under a project.",
+                        "created_at": {
+                            "date": "2019-05-21",
+                            "time": "05:36:21",
+                            "datetime": "2019-05-21 05:36:21",
+                            "timezone": "Etc\/UTC",
+                            "timestamp": "2019-05-21T05:36:21+00:00"
+                        },
+                        "slug": "co_worker"
+                    }
+                ],
+                "meta": {
+                    "pagination": {
+                        "total": 2,
+                        "count": 2,
+                        "per_page": 15,
+                        "current_page": 1,
+                        "total_pages": 1,
+                        "links": []
+                    }
+                }
+            }
+
+## Project Role [/Project Role]
+
+## Manage Single Project Role [/roles/{id}]
+
++ Parameters
+    + id (string) - id of the Project Role in the form of an string
+
+### Retrieve An Project Role [GET]
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "data": {
+                    "id": 1,
+                    "title": "Manager",
+                    "description": "Manager is a person who manages the project.",
+                    "created_at": {
+                        "date": "2019-05-21",
+                        "time": "05:36:21",
+                        "datetime": "2019-05-21 05:36:21",
+                        "timezone": "Etc\/UTC",
+                        "timestamp": "2019-05-21T05:36:21+00:00"
+                    },
+                    "slug": "manager"
+                }
+            }

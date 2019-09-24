@@ -1,0 +1,58 @@
+# Group License
+
+## Check License [/license/check]
+
+### Check License [GET]
+
++ Response 200 (application/json)
+    + Body
+            
+            {
+                "success": true,
+                "data": {
+                    "license": [],
+                    "status": [],
+                    "message": ""
+                }
+            }
+
+## License Activation [/license/activation]
+
+### License Activation [POST]
++ email (string,required) 
++ key   (string, required)
+
++ Request
+    + Body
+
+            {
+                "email": ""
+                "key": ""
+            }
+
++ Response 200 (application/json)
+    + Body
+            
+            {
+
+            }
+
+
+
+## License delete [/license/delete]
+
+### License delete [POST]
+
++ Request
+    + Body
+
+            {
+
+            }
+
++ Response 200 (application/json)
+    + Body
+            
+            {
+
+            }

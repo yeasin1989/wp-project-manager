@@ -1,0 +1,129 @@
+# Group Projects Calendar
+
+## Calendar events [/calendar-events/{?project_id,start,end}]
+
+### List All Calendar events [GET]
+Fetches all available calendar events
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "success": true,
+                "data": [
+                    {
+                        "id": 180,
+                        "title": "privatetask",
+                        "start": {
+                            "date": "2019-06-28",
+                            "time": "04:20:08",
+                            "datetime": "2019-06-28 04:20:08",
+                            "timezone": "Etc/UTC",
+                            "timestamp": "2019-06-28T04:20:08+00:00"
+                        },
+                        "end": {
+                            "date": "2019-06-28",
+                            "time": "04:20:08",
+                            "datetime": "2019-06-28 04:20:08",
+                            "timezone": "Etc/UTC",
+                            "timestamp": "2019-06-28T04:20:08+00:00"
+                        },
+                        "status": "incomplete",
+                        "type": "task",
+                        "project_id": "7",
+                        "created_at": {
+                            "date": "2019-06-28",
+                            "time": "04:20:08",
+                            "datetime": "2019-06-28 04:20:08",
+                            "timezone": "Etc/UTC",
+                            "timestamp": "2019-06-28T04:20:08+00:00"
+                        },
+                        "updated_at": {
+                            "date": "2019-06-28",
+                            "time": "04:20:08",
+                            "datetime": "2019-06-28 04:20:08",
+                            "timezone": "Etc/UTC",
+                            "timestamp": "2019-06-28T04:20:08+00:00"
+                        },
+                        "assignees": {
+                            "data": [
+                                {
+                                    "id": "29",
+                                    "display_name": "user_login241",
+                                    "avatar_url": "http://0.gravatar.com/avatar/f0fb0fb06be2111cf54d85e5f61fdf13?s=96&d=mm&r=g"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": 191,
+                        "title": "testcreatetask",
+                        "start": {
+                            "date": "2019-06-20",
+                            "time": "00:00:00",
+                            "datetime": "2019-06-20 00:00:00",
+                            "timezone": "Etc/UTC",
+                            "timestamp": "2019-06-20T00:00:00+00:00"
+                        },
+                        "end": {
+                            "date": "2019-06-26",
+                            "time": "00:00:00",
+                            "datetime": "2019-06-26 00:00:00",
+                            "timezone": "Etc/UTC",
+                            "timestamp": "2019-06-26T00:00:00+00:00"
+                        },
+                        "status": "complete",
+                        "type": "task",
+                        "project_id": "7",
+                        "created_at": {
+                            "date": "2019-06-28",
+                            "time": "06:02:16",
+                            "datetime": "2019-06-28 06:02:16",
+                            "timezone": "Etc/UTC",
+                            "timestamp": "2019-06-28T06:02:16+00:00"
+                        },
+                        "updated_at": {
+                            "date": "2019-06-28",
+                            "time": "06:03:17",
+                            "datetime": "2019-06-28 06:03:17",
+                            "timezone": "Etc/UTC",
+                            "timestamp": "2019-06-28T06:03:17+00:00"
+                        },
+                        "assignees": {
+                            "data": [
+                                {
+                                    "id": "1",
+                                    "display_name": "admin",
+                                    "avatar_url": "http://1.gravatar.com/avatar/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+
+## calendar resource [/calendar-resource/]
+
+### List All Calendar resource [GET]
+Fetches all available calendar resource
+
++ Response 200 (application/json)
+    + Body
+            
+            {
+                "success": true,
+                "data": [
+                    {
+                        "id": "3",
+                        "avatar_url": "http://2.gravatar.com/avatar/b75a7dd26f16ae13b440190aef177ac1?s=96&d=mm&r=g",
+                        "title": "user_login2",
+                        "role_id": "3"
+                    },
+                    {
+                        "id": "1",
+                        "avatar_url": "http://1.gravatar.com/avatar/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                        "title": "admin",
+                        "role_id": "1"
+                    },
+                ]
+            }

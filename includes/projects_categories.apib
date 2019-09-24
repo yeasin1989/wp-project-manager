@@ -1,0 +1,418 @@
+# Group Project Categories
+
+
+## Project Categories List [/categories/{?per_page,page,type}]
+
+
+### List All Project Categories [GET]
+
+Fetches all available Project Categories with pagination
+
++ Parameters
+
+    + per_page: 15 (number, optional) - The number of results per page.
+        + Default: `15`
+    + page: 1 (number, optional) - The current page number of results.
+        + Default: `1`
+    + type (string, optional) - The status of Project.
+
++ Response 200 (application/json)
+    + Body
+    
+            [
+                {
+                    "data": [
+                        {
+                            "id": 1,
+                            "title": "Development",
+                            "description": null,
+                            "categorible_type": "project",
+                            "created_at": {
+                                "date": "2019-05-21",
+                                "time": "05:46:00",
+                                "datetime": "2019-05-21 05:46:00",
+                                "timezone": "Etc\/UTC",
+                                "timestamp": "2019-05-21T05:46:00+00:00"
+                            },
+                            "creator": {
+                                "data": {
+                                    "id": 1,
+                                    "username": "admin",
+                                    "nicename": "admin",
+                                    "email": "rrcucse.11@gmail.com",
+                                    "profile_url": "",
+                                    "display_name": "admin",
+                                    "manage_capability": 1,
+                                    "create_capability": 1,
+                                    "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                                    "github": "rokibulfsdsdafrokib",
+                                    "bitbucket": "rokibulisalmfsd",
+                                    "roles": {
+                                        "data": [
+                                            {
+                                                "id": 1,
+                                                "title": "Manager",
+                                                "description": "Manager is a person who manages the project.",
+                                                "created_at": {
+                                                    "date": "2019-05-21",
+                                                    "time": "05:36:21",
+                                                    "datetime": "2019-05-21 05:36:21",
+                                                    "timezone": "Etc\/UTC",
+                                                    "timestamp": "2019-05-21T05:36:21+00:00"
+                                                },
+                                                "slug": "manager"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "updater": {
+                                "data": {
+                                    "id": 1,
+                                    "username": "admin",
+                                    "nicename": "admin",
+                                    "email": "rrcucse.11@gmail.com",
+                                    "profile_url": "",
+                                    "display_name": "admin",
+                                    "manage_capability": 1,
+                                    "create_capability": 1,
+                                    "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                                    "github": "rokibulfsdsdafrokib",
+                                    "bitbucket": "rokibulisalmfsd",
+                                    "roles": {
+                                        "data": [
+                                            {
+                                                "id": 1,
+                                                "title": "Manager",
+                                                "description": "Manager is a person who manages the project.",
+                                                "created_at": {
+                                                    "date": "2019-05-21",
+                                                    "time": "05:36:21",
+                                                    "datetime": "2019-05-21 05:36:21",
+                                                    "timezone": "Etc\/UTC",
+                                                    "timestamp": "2019-05-21T05:36:21+00:00"
+                                                },
+                                                "slug": "manager"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "meta": {
+                        "pagination": {
+                            "total": 1,
+                            "count": 1,
+                            "per_page": 20,
+                            "current_page": 1,
+                            "total_pages": 1,
+                            "links": []
+                        }
+                    }
+                }
+            ]
+
+## Project Categories List [/categories]
+
+### Create A Project Categories [POST]
+
++ title: (string, required) - title of project category
++ description: (string,optional) - description of project category
++ categorible_type: (string,optional) - project
+
++ Request (application/json)
+    + Body
+    
+            {
+                "title": "test category",
+                "description": " ",
+                "categorible_type": "project"
+            }
+
++ Response 201 (application/json)
+    + Body
+
+            {
+                "message": "A new category has been created successfully.",
+                "data": {
+                    "id": 4,
+                    "title": "testing category",
+                    "description": null,
+                    "categorible_type": null,
+                    "created_at": {
+                        "date": "2019-07-29",
+                        "time": "10:41:45",
+                        "datetime": "2019-07-29 10:41:45",
+                        "timezone": "Etc\/UTC",
+                        "timestamp": "2019-07-29T10:41:45+00:00"
+                    },
+                    "creator": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": [
+                                    {
+                                        "id": 1,
+                                        "title": "Manager",
+                                        "description": "Manager is a person who manages the project.",
+                                        "created_at": {
+                                            "date": "2019-05-21",
+                                            "time": "05:36:21",
+                                            "datetime": "2019-05-21 05:36:21",
+                                            "timezone": "Etc\/UTC",
+                                            "timestamp": "2019-05-21T05:36:21+00:00"
+                                        },
+                                        "slug": "manager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "updater": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": [
+                                    {
+                                        "id": 1,
+                                        "title": "Manager",
+                                        "description": "Manager is a person who manages the project.",
+                                        "created_at": {
+                                            "date": "2019-05-21",
+                                            "time": "05:36:21",
+                                            "datetime": "2019-05-21 05:36:21",
+                                            "timezone": "Etc\/UTC",
+                                            "timestamp": "2019-05-21T05:36:21+00:00"
+                                        },
+                                        "slug": "manager"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+
+
+## Manage Single Project Categories [/categories/{id}]
+
++ Parameters
+    + id (string) - id of the Project Categories in the form of an string
+
+### Retrieve An Project Categories [GET]
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "data": {
+                    "id": 1,
+                    "title": "Development",
+                    "description": null,
+                    "categorible_type": "project",
+                    "created_at": {
+                        "date": "2019-05-21",
+                        "time": "05:46:00",
+                        "datetime": "2019-05-21 05:46:00",
+                        "timezone": "Etc\/UTC",
+                        "timestamp": "2019-05-21T05:46:00+00:00"
+                    },
+                    "creator": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": [
+                                    {
+                                        "id": 1,
+                                        "title": "Manager",
+                                        "description": "Manager is a person who manages the project.",
+                                        "created_at": {
+                                            "date": "2019-05-21",
+                                            "time": "05:36:21",
+                                            "datetime": "2019-05-21 05:36:21",
+                                            "timezone": "Etc\/UTC",
+                                            "timestamp": "2019-05-21T05:36:21+00:00"
+                                        },
+                                        "slug": "manager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "updater": {
+                        "data": {
+                            "id": 1,
+                            "username": "admin",
+                            "nicename": "admin",
+                            "email": "rrcucse.11@gmail.com",
+                            "profile_url": "",
+                            "display_name": "admin",
+                            "manage_capability": 1,
+                            "create_capability": 1,
+                            "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                            "github": "rokibulfsdsdafrokib",
+                            "bitbucket": "rokibulisalmfsd",
+                            "roles": {
+                                "data": [
+                                    {
+                                        "id": 1,
+                                        "title": "Manager",
+                                        "description": "Manager is a person who manages the project.",
+                                        "created_at": {
+                                            "date": "2019-05-21",
+                                            "time": "05:36:21",
+                                            "datetime": "2019-05-21 05:36:21",
+                                            "timezone": "Etc\/UTC",
+                                            "timestamp": "2019-05-21T05:36:21+00:00"
+                                        },
+                                        "slug": "manager"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+
+### Update An Project Categories [PUT]
+
++ title: (string, required) - title of project category
++ description: (string,optional) - description of project category
++ categorible_type: (string,optional) - project
+
++ Request (application/json)
+    + Body
+    
+            {
+                "title": "test category",
+                "description": " ",
+                "categorible_type": "project"
+            }
+
+
++ Response 201 (application/json)
+    + Body
+
+            {
+                "message": "A category has been updated successfully.",
+                "data": {
+                        "id": 2,
+                        "title": "test category update",
+                        "description": "testing",
+                        "categorible_type": "project",
+                        "created_at": {
+                            "date": "2019-07-29",
+                            "time": "10:38:03",
+                            "datetime": "2019-07-29 10:38:03",
+                            "timezone": "Etc\/UTC",
+                            "timestamp": "2019-07-29T10:38:03+00:00"
+                        },
+                        "creator": {
+                            "data": {
+                                "id": 1,
+                                "username": "admin",
+                                "nicename": "admin",
+                                "email": "rrcucse.11@gmail.com",
+                                "profile_url": "",
+                                "display_name": "admin",
+                                "manage_capability": 1,
+                                "create_capability": 1,
+                                "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                                "github": "rokibulfsdsdafrokib",
+                                "bitbucket": "rokibulisalmfsd",
+                                "roles": {
+                                    "data": [
+                                        {
+                                            "id": 1,
+                                            "title": "Manager",
+                                            "description": "Manager is a person who manages the project.",
+                                            "created_at": {
+                                                "date": "2019-05-21",
+                                                "time": "05:36:21",
+                                                "datetime": "2019-05-21 05:36:21",
+                                                "timezone": "Etc\/UTC",
+                                                "timestamp": "2019-05-21T05:36:21+00:00"
+                                            },
+                                            "slug": "manager"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "updater": {
+                            "data": {
+                                "id": 1,
+                                "username": "admin",
+                                "nicename": "admin",
+                                "email": "rrcucse.11@gmail.com",
+                                "profile_url": "",
+                                "display_name": "admin",
+                                "manage_capability": 1,
+                                "create_capability": 1,
+                                "avatar_url": "http:\/\/1.gravatar.com\/avatar\/41192594a3bd644bf17130a05a78a8f1?s=96&d=mm&r=g",
+                                "github": "rokibulfsdsdafrokib",
+                                "bitbucket": "rokibulisalmfsd",
+                                "roles": {
+                                    "data": [
+                                        {
+                                            "id": 1,
+                                            "title": "Manager",
+                                            "description": "Manager is a person who manages the project.",
+                                            "created_at": {
+                                                "date": "2019-05-21",
+                                                "time": "05:36:21",
+                                                "datetime": "2019-05-21 05:36:21",
+                                                "timezone": "Etc\/UTC",
+                                                "timestamp": "2019-05-21T05:36:21+00:00"
+                                            },
+                                            "slug": "manager"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+### Delete An Project Categories [DELETE]
+
++ Request (application/json)
++ Response 200 (application/json)
+    + Body
+    
+            {
+                "message": "A category has been deleted successfully."
+            }

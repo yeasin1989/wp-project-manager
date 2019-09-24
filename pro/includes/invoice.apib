@@ -1,0 +1,93 @@
+# Group Invoice
+
+## invoices [/invoices]
+
+### invoices [GET]
+
+
++ Response 200 (application/json)
+    + Body 
+
+            {
+                "data": [],
+                "meta": {
+                    "client_addresses": [],
+                    "pagination": {
+                        "total": 0,
+                        "count": 0,
+                        "per_page": 15,
+                        "current_page": 1,
+                        "total_pages": 0,
+                        "links": []
+                    }
+                }
+            }
+
+## invoices address [/invoice/address]
+
+### invoices address [POST]
+
++ organization (string,optional) -
++ address_line_1 (string,optional) -
++ address_line_2 (string,optional) -
++ city (string,optional) -
++ sate_province (string,optional) -
++ zip_code (number,optional) -
++ country_code (string,optional) -
+
++ Request
+    + Body 
+    
+            {
+                "organization": "testorg"
+                "address_line_1": "test address"
+                "address_line_2": "abc"
+                "city": "dhaka"
+                "sate_province": "mirpur"
+                "zip_code": 1229
+                "country_code": "BD"
+            }
+
++ Response 200 (application/json)
+    + Body 
+
+            {
+                "message": "success_messages.setting_saved",
+                "data": {
+                    "id": 15,
+                    "key": "invoice",
+                    "value": [],
+                    "created_at": {
+                        "date": "2019-08-06",
+                        "time": "06:15:45",
+                        "datetime": "2019-08-06 06:15:45",
+                        "timezone": "Etc/UTC",
+                        "timestamp": "2019-08-06T06:15:45+00:00"
+                    }
+                }
+            }
+
+## invoices User address [/invoice/address/user/{id}]
+
++ Parameters
+    + id (number,required) - id of the User
+
+### invoices User address [GET]
+
+
++ Response 200 (application/json)
+    + Body 
+
+            {
+
+            }
+
+### Create invoices User address [POST]
+
+
++ Response 200 (application/json)
+    + Body 
+
+            {
+
+            }

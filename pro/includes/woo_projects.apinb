@@ -1,0 +1,25 @@
+# Group WooProjects
+
+## Woo Projects [/woo-project/project/]
+
+### List All Woo Projects [GET]
+Fetches all available Woocommerce Projects 
+
+
++ Response 200 (application/json)
+    + Body
+            
+            {
+                "data": []
+            }
+
+## Woo Products [/woo-project/products/]
+### List All Woo Products [GET]
+Fetches all available Woocommerce Products 
+
++ Response 200 (application/json)
+    + Body
+            
+            {
+                "data": []
+            }

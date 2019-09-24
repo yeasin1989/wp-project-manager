@@ -1,0 +1,61 @@
+# Group Project Trello
+
+
+## Project Trello [/trello/{?per_page,page}]
+
+### List All Project Trello [GET]
+
+Fetches all available Project MyTask with pagination
++ Parameters
+    + per_page: 15 (number, optional) - The number of results per page.
+        + Default: `15`
+    + page: 1 (number, optional) - The current page number of results.
+        + Default: `1`
+
++ Response 200 (application/json)
+    + Body
+
+            {
+
+            }
+
+## Project Trello User List [/Trello User List]
+
+## Manage Single Project Trello User List [/trello/get_user{?app_key,app_token}]
+
++ Parameters
+    + app_key (string) - Trello API KEY
+    + app_token (string) - Trello API token
+
+### Retrieve An Project Trello [GET]
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "id": "5cfdca5457bd795ea342f353",
+                "identifier": "Server Token",
+                "idMember": "566e8512e0022e385391fa7e",
+                "dateCreated": "2019-06-10T03:11:16.754Z",
+                "dateExpires": null,
+                "permissions": [
+                    {
+                        "idModel": "566e8512e0022e385391fa7e",
+                        "modelType": "Member",
+                        "read": true,
+                        "write": true
+                    },
+                    {
+                        "idModel": "*",
+                        "modelType": "Board",
+                        "read": true,
+                        "write": true
+                    },
+                    {
+                        "idModel": "*",
+                        "modelType": "Organization",
+                        "read": true,
+                        "write": true
+                    }
+                ]
+            }

@@ -1,0 +1,138 @@
+# Group Project settings
+
+
+## Project settings List [/projects/{project_id}/settings/{?key}]
+
+
+
+### List All Project settings [GET]
+
+Fetches all available Project settings with pagination
++ Parameters
+    + project_id(number, required)
+    + key(string, optional)
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "data": [
+                    {
+                        "id": 3,
+                        "key": "capabilities",
+                        "value": {
+                            "co_worker": {
+                                "create_message": "true",
+                                "view_private_message": "true",
+                                "create_list": "true",
+                                "view_private_list": "true",
+                                "create_task": "true",
+                                "view_private_task": "true",
+                                "create_milestone": "true",
+                                "view_private_milestone": "true",
+                                "create_file": "true",
+                                "view_private_file": "true"
+                            },
+                            "client": {
+                                "create_message": "false",
+                                "view_private_message": "false",
+                                "create_list": "true",
+                                "view_private_list": "true",
+                                "create_task": "true",
+                                "view_private_task": "false",
+                                "create_milestone": "false",
+                                "view_private_milestone": "false",
+                                "create_file": "true",
+                                "view_private_file": "false"
+                            }
+                        },
+                        "created_at": {
+                            "date": "2019-06-19",
+                            "time": "04:39:46",
+                            "datetime": "2019-06-19 04:39:46",
+                            "timezone": "Etc\/UTC",
+                            "timestamp": "2019-06-19T04:39:46+00:00"
+                        }
+                    },
+                    {
+                        "id": 4,
+                        "key": "slack",
+                        "value": {
+                            "status": "enable",
+                            "webhook": "",
+                            "options": {
+                                "tasks": {
+                                    "create": "true",
+                                    "update": "true",
+                                    "complete": "true",
+                                    "incomplete": "true",
+                                    "createComment": "true",
+                                    "updateComment": "false"
+                                }
+                            }
+                        },
+                        "created_at": {
+                            "date": "2019-06-25",
+                            "time": "05:49:10",
+                            "datetime": "2019-06-25 05:49:10",
+                            "timezone": "Etc\/UTC",
+                            "timestamp": "2019-06-25T05:49:10+00:00"
+                        }
+                    },
+                    {
+                        "id": 5,
+                        "key": "git_bit",
+                        "value": {
+                            "project_id": "7",
+                            "status": "enable"
+                        },
+                        "created_at": {
+                            "date": "2019-06-25",
+                            "time": "05:49:11",
+                            "datetime": "2019-06-25 05:49:11",
+                            "timezone": "Etc\/UTC",
+                            "timestamp": "2019-06-25T05:49:11+00:00"
+                        }
+                    }
+                ]
+            }
+
+### Update An Project settings [PUT]
+
++ key: (string,required) -
+
++ Request (application/json)
+    + Body
+
+            {
+                "key" : "capabilities"
+            }
+
++ Response 201 (application/json)
+    + Body
+
+            {
+                "message": "Settings has been changed successfully.",
+                "data": {
+                    "id": 14,
+                    "key": "capabilities",
+                    "value": false,
+                    "created_at": {
+                        "date": "2019-07-30",
+                        "time": "13:16:44",
+                        "datetime": "2019-07-30 13:16:44",
+                        "timezone": "Etc\/UTC",
+                        "timestamp": "2019-07-30T13:16:44+00:00"
+                    }
+                }
+            }
+
+### Delete An Project settings [DELETE]
+
++ Request (application/json)
++ Response 200 (application/json)
+    + Body
+    
+            {
+                "message": "Delete settings record"
+            }
