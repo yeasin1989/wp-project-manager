@@ -4,7 +4,6 @@
 .clearfix:before,
 .clearfix:after {
   display: table;
-  content: "";
   line-height: 0;
 }
 .clearfix:after {
